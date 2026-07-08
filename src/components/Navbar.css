@@ -1,0 +1,236 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0 1px 0 #e8e8e8, 0 4px 24px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ── Nav bar ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 70px;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logo-main span {
+  color: #f6a811;
+}
+
+/* ── Center: contact info ── */
+.nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-contact-item:hover {
+  color: #f6a811;
+}
+
+.nav-contact-item .icon {
+  color: #f6a811;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ── Right: nav links (desktop) ── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #111827;
+  background: #f9fafb;
+}
+
+.nav-link.active {
+  color: #111827;
+  background: #fef3c7;
+}
+
+.nav-cta {
+  background: #f6a811;
+  color: #111827 !important;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(246, 168, 17, 0.35);
+  transition: all 0.2s ease;
+  margin-left: 0.25rem;
+  text-decoration: none;
+}
+
+.nav-cta:hover {
+  background: #e09900 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(246, 168, 17, 0.45) !important;
+  color: #111827 !important;
+}
+
+/* ── Hamburger (mobile only) ── */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: #f3f4f6;
+}
+
+.hamburger-icon {
+  font-size: 1.25rem;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background: #374151;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ── Hide contact at mid breakpoint ── */
+@media (max-width: 900px) {
+  .nav-contact { display: none; }
+}
+
+/* ── Mobile: show hamburger, hide desktop links ── */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-right  { display: none; }
+
+  .navbar { padding: 0 1.25rem; }
+}
+
+/* ════════════════════════════════════════════
+   MOBILE DRAWER  (rendered via React portal)
+   These are global styles applied to body-level elements.
+════════════════════════════════════════════ */
+
+/* Dimmed backdrop */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  top: 70px;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 8888;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Slide-down panel */
+@keyframes mobileSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.25rem 1.5rem;
+  gap: 0.25rem;
+  border-bottom: 3px solid #f6a811;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+  animation: mobileSlideDown 0.2s ease forwards;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background: #fef3c7;
+  color: #111827;
+}
+
+.mobile-nav-cta {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  background: #f6a811;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(246, 168, 17, 0.4);
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease;
+}
+
+.mobile-nav-cta:hover,
+.mobile-nav-cta:active {
+  background: #e09900;
+  color: #111827;
+}

@@ -1,0 +1,77 @@
+.servicesHeader {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.servicesHeader h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.servicesHeader h1 span {
+  color: var(--secondary-color);
+}
+
+.servicesHeader p {
+  color: #dcdde1;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.servicesContainer {
+  padding: 5rem 2rem;
+  background-color: var(--light-bg);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.serviceCard {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform var(--transition-speed) ease;
+  border-top: 4px solid transparent;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  border-top-color: var(--secondary-color);
+}
+
+.serviceIcon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.serviceCard p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.ctaSection {
+  background-color: var(--secondary-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.ctaSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
