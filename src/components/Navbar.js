@@ -42,19 +42,7 @@ const Navbar = () => {
             <span className="logo-main">GOLDEN <span>MACHINERY</span></span>
           </Link>
 
-          {/* Center: contact (desktop only) */}
-          <div className="nav-contact">
-            <a href="tel:+917078677963" className="nav-contact-item">
-              <FaPhoneAlt className="icon" />
-              +91 7078677963
-              <CopyButton text="7078677963" />
-            </a>
-            <a href="mailto:goldenmachineryrajim@gmail.com" className="nav-contact-item">
-              <FaEnvelope className="icon" />
-              goldenmachineryrajim@gmail.com
-              <CopyButton text="goldenmachineryrajim@gmail.com" />
-            </a>
-          </div>
+
 
           {/* Right: desktop nav links */}
           <div className="nav-right">
