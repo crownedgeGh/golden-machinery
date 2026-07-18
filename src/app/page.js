@@ -67,6 +67,7 @@ export default function Home() {
                 width={800}
                 height={600}
                 className={styles.productImage}
+                priority={true}
               />
             </div>
             <div className={styles.productCard}>
@@ -76,6 +77,7 @@ export default function Home() {
                 width={800}
                 height={600}
                 className={styles.productImage}
+                priority={true}
               />
             </div>
           </div>
@@ -177,6 +179,7 @@ export default function Home() {
                   height={0}
                   sizes="100vw"
                   style={{ width: '100%', height: 'auto', display: 'block' }}
+                  priority={pageNum === 1}
                 />
                 <div className={styles.galleryOverlay}>
                   <span className={styles.galleryOverlayText}>
