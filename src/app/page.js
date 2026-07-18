@@ -52,6 +52,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── OUR PRODUCTS ─── */}
+      <section className={`section ${styles.products}`}>
+        <div className="container">
+          <div className={styles.productsHeader}>
+            <h2 className="section-title">Our Products</h2>
+            <div className="title-accent" style={{ margin: '0 auto' }} />
+          </div>
+          <div className={styles.productsGrid}>
+            <div className={styles.productCard}>
+              <Image
+                src="/pr1.webp"
+                alt="Product 1"
+                width={800}
+                height={600}
+                className={styles.productImage}
+              />
+            </div>
+            <div className={styles.productCard}>
+              <Image
+                src="/pr2.webp"
+                alt="Product 2"
+                width={800}
+                height={600}
+                className={styles.productImage}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── ABOUT / WHO WE ARE ─── */}
       <section className={`section ${styles.about}`}>
         <div className="container">

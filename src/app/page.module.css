@@ -167,6 +167,46 @@
 }
 
 /* ═══════════════════════════════════════
+   OUR PRODUCTS
+═══════════════════════════════════════ */
+.products {
+  background: var(--surface);
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.productsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.productCard {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.productImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+/* ═══════════════════════════════════════
    ABOUT / WHO WE ARE
 ═══════════════════════════════════════ */
 .about {
@@ -595,6 +635,10 @@
   }
 
   /* No height override needed — image is auto-sized */
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
 
   .aboutCardsCol {
     grid-template-columns: 1fr;
